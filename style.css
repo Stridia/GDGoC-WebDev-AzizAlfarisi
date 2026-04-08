@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #F0F8FF;
+}
+
+.site-header,
+.container,
+.site-footer {
+    width: min(960px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.site-header {   
+    padding: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.site-bar, .navbar {
+    margin: 0 0.25rem 0 0;
+    padding: 1.5rem 0.25rem 0.25rem;
+}
+
+.site-bar h2, .site-bar p {
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar p {
+    padding: 0rem;
+    margin: auto 1rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    margin: 1.5rem auto;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    outline: solid;
+}
+
+.mini-card {
+    background-color: aquamarine;
+    border-radius: 8px;
+    width: 280px;
+    margin: 0 auto;
+    padding: 0; 
+}
+
+.site-footer {
+    outline: solid;
+}
+
