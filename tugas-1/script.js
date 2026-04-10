@@ -14,7 +14,7 @@ function renderParticipants() {
         
         const b  = document.createElement("b");
         b.textContent = p.name;
-        const text = document.createTextNode(` • ${p.category}`);
+        const text = document.createTextNode(` [${p.category}]`);
         
         li.appendChild(b);
         li.appendChild(text);
