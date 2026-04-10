@@ -9,30 +9,32 @@
 <body>
     <header class="site-header">
         <div class="site-bar">
-            <h2>ITS Run Fest 2025</h1>
+            <h1>ITS Run Fest 2025</h1>
             <p>Surabaya, Jawa Timur</p>
         </div>
         <div class="navbar">
-            <p>Home</p>
-            <p>About</p>
-            <p>Registration</p>
-            <p>Contact</p>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Registration</a>
+            <a href="">Contact</a>
         </div>
     </header>
 
     <main class="container">
-        <div class="card">
+        <section class="card">
             <h2>About The Event</h2>
             <p>Surabaya ITS Run Fest merupakan acara komunitas lari sehat yang diselenggarakan oleh IKA ITS PW Jatim dalam 
-                rangka menyambut Dies Natalis ke-65. Ada doorprize menarik diakhir acara, kapan lagi bisa olahraga sehat 
-                trus pulang dapat hadiah... </p>
-        </div>
-        <div class="card">
+                rangka menyambut Dies Natalis ke-65. Event ini akan dilaksanakan pada <b>Minggu, 5 November 2025 pukul 6.00-11.00 
+                WIB.</b> Ayoo buruan daftar, karena tentunya akan ada doorprize menarik di akhir acara, kapan lagi bisa olahraga sehat 
+                terus pulang-pulang bisa dapat hadiah?? </p>
+        </section>
+
+        <section class="card">
             <h2>General Category</h2>
             <div class="card-section">
-                <div class="mini-card">
+                <div id="run-2k" class="mini-card">
                     <h3>2K Fun Run</h3>
-                    <p>Entry Ticket: Free</p>
+                    <p>Entry Ticket: <b>Free</b></p>
                     <p>Benefits:</p>
                     <ul>
                         <li>Race Tee</li>
@@ -40,9 +42,9 @@
                         <li>Goodiebag</li>
                     </ul>
                 </div>
-                <div class="mini-card">
+                <div id="run-5k" class="mini-card">
                     <h3>5K Running Enthusiast</h3>
-                    <p>Entry Ticket: Free</p>
+                    <p>Entry Ticket: <b>Rp200.000</b></p>
                     <p>Benefits:</p>
                     <ul>
                         <li>Race Tee</li>
@@ -51,9 +53,9 @@
                         <li>Goodiebag</li>
                     </ul>
                 </div>
-                <div class="mini-card">
-                    <h3>10K Running Enthusiast</h3>
-                    <p>Entry Ticket: Free</p>
+                <div id="run-10k" class="mini-card">
+                    <h3>10K Running Marathon</h3>
+                    <p>Entry Ticket: <b>Rp250.000</b></p>
                     <p>Benefits:</p>
                     <ul>
                         <li>Race Tee</li>
@@ -63,15 +65,48 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+
+        <section class="card">
             <h2>Event Registration</h2>
-            <p>Lorem Ipsum </p>
-        </div>
-        <div class="card">
+
+            <form id="registration-form" class="form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email"  placeholder="Enter your email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Running Category</label>
+                    <select id="category" name="category">
+                        <option value="2k">2K Fun Run</option>
+                        <option value="5k">5K Running Enthusiast</option>
+                        <option value="10k">10K Running Marathon</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-inline">
+                    <label for="tos">
+                        <input id="tos" name="tos" type="checkbox" required />
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Register</button>
+
+                <p id="message" class="message"></p>
+            </form>
+        </section>
+        <section class="card">
             <h2>Registered Participants</h2>
-            <p>Lorem Ipsum </p>
-        </div>
+            <ul id="participants-list" class="participants-list">
+            </ul>
+        </section>
     </main>
     
     <footer class="site-footer">
