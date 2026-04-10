@@ -11,8 +11,13 @@ function renderParticipants() {
     participantsList.innerHTML = "";
     for (const p of participants) {
         const li = document.createElement("li");
-        li.textContent = `${p.name} • ${p.category}`;
-
+        
+        const b  = document.createElement("b");
+        b.textContent = p.name;
+        const text = document.createTextNode(` • ${p.category}`);
+        
+        li.appendChild(b);
+        li.appendChild(text);
         participantsList.appendChild(li);
     }
 }
@@ -61,7 +66,7 @@ form.addEventListener("submit", (event) => {
     setTimeout(() => {
         message.textContent = "";
         message.style.all = "unset";
-    }, 3000);
+    }, 5000);
     
     form.reset();
 });
