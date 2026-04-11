@@ -1,5 +1,7 @@
 const participants = [];
 
+const body = document.getElementById("body");
+const toggleTheme = document.getElementById("toggle-theme");
 const form = document.getElementById("registration-form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -57,6 +59,22 @@ form.addEventListener("submit", (event) => {
     addParticipant({name, email, category: CATEGORY_MAP[category] || category});
     showStatus("Registration Submitted!");
     form.reset();
+});
+
+let mode = "light";
+toggleTheme.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleTheme.innerHTML="";
+
+    if (mode == "light") {
+        body.className = "dark-mode";
+        toggleTheme.textContent = "Light";
+        mode = "dark";
+    } else {
+        body.className = "";
+        toggleTheme.textContent = "Dark";
+        mode = "light";
+    }
 });
 
 renderParticipants();
