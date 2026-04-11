@@ -7,6 +7,12 @@ const categoryInput = document.getElementById("category");
 const participantsList = document.getElementById("participants-list");
 const message = document.getElementById("message");
 
+const CATEGORY_MAP = {
+    "2k" : "2K Fun Run",
+    "5k" : "5K Running Enthusiast",
+    "10k" : "10K Running Marathon" 
+};
+
 function renderParticipants() {
     participantsList.innerHTML = "";
     for (const p of participants) {
@@ -42,20 +48,7 @@ form.addEventListener("submit", (event) => {
 
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
-    let category = categoryInput.value.trim();
-    switch (category) {
-        case "2k": 
-            category = "2K Fun Run";
-            break;
-        case "5k":
-            category = "5K Running Enthusiast";
-            break;
-        case "10k":
-            category = "10K Running Marathon";
-            break;
-        default:
-            break;
-    }
+    const category = categoryInput.value.trim();
 
     if (!name || !email) {
         showStatus("Name and email are required.", true);
@@ -67,7 +60,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    addParticipant({name, email, category});
+    addParticipant({name, email, category: CATEGORY_MAP[category] || category});
     showStatus("Registration Submitted!");
     form.reset();
 });
