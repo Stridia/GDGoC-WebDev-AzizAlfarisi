@@ -61,20 +61,11 @@ form.addEventListener("submit", (event) => {
     form.reset();
 });
 
-let mode = "light";
 toggleTheme.addEventListener("click", (event) => {
     event.preventDefault();
-    toggleTheme.innerHTML="";
 
-    if (mode == "light") {
-        body.className = "dark-mode";
-        toggleTheme.textContent = "Light";
-        mode = "dark";
-    } else {
-        body.className = "";
-        toggleTheme.textContent = "Dark";
-        mode = "light";
-    }
+    const isDark = body.classList.toggle("dark-mode");
+    toggleTheme.textContent = (isDark) ? "Light" : "Dark";
 });
 
 renderParticipants();
