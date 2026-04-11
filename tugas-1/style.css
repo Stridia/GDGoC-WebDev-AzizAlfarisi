@@ -191,6 +191,16 @@ select:focus {
     font-weight: 600;
 }
 
+.status-error {
+    color: #ea4335; 
+    margin-bottom: 1rem;
+}
+
+.status-success {
+    color: #34a853;
+    margin-bottom: 1rem;
+}
+
 .participants-list {
     list-style: none;
     padding-left: 0;

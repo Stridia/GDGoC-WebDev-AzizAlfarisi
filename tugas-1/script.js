@@ -27,6 +27,16 @@ function addParticipant(participant) {
     renderParticipants();
 }
 
+function showStatus(content, isError=false) {
+    message.textContent = content;
+    message.className = "message " + ((isError) ? "status-error" : "status-success");
+
+    setTimeout(() => {
+        message.textContent = "";
+        message.className = "message";
+    }, 5000);
+}
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -48,26 +58,17 @@ form.addEventListener("submit", (event) => {
     }
 
     if (!name || !email) {
-        message.textContent = "Name and email are required.";
-        message.style = "color: #ea4335; margin: 0 0 1rem;";
+        showStatus("Name and email are required.", true);
         return;
     }
 
     if (!email.includes("@")) {
-        message.textContent = "Please enter a valid email address.";
-        message.style = "color: #ea4335; margin: 0 0 1rem;";
+        showStatus("Please enter a valid email address.", true);
         return;
     }
 
     addParticipant({name, email, category});
-    message.style = "color: #34a853; margin: 0 0 1rem;";
-    message.textContent = "Registration Submitted!";
-
-    setTimeout(() => {
-        message.textContent = "";
-        message.style.all = "unset";
-    }, 5000);
-    
+    showStatus("Registration Submitted!");
     form.reset();
 });
 
