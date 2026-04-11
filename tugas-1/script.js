@@ -17,13 +17,7 @@ function renderParticipants() {
     participantsList.innerHTML = "";
     for (const p of participants) {
         const li = document.createElement("li");
-        
-        const b  = document.createElement("b");
-        b.textContent = p.name;
-        const text = document.createTextNode(` [${p.category}]`);
-        
-        li.appendChild(b);
-        li.appendChild(text);
+        li.innerHTML = `<b>${p.name}</b> [${p.category}]`;
         participantsList.appendChild(li);
     }
 }
