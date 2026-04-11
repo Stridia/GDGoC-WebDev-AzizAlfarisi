@@ -19,12 +19,12 @@
 
 .dark-mode {
     --bg: #0B121E;
-    --theme: #000;
+    --theme: #1A202C;
     --theme-inverse: #fff;
     --line: #555;
     --button: #fff;
     --button-hover: #ccc;
-    --navbar-hover: #00b3ff;
+    --navbar-hover: #00bbff;
 
     --run-2k: #3074e1;
     --run-5k: #ff761b;
