@@ -4,11 +4,19 @@
     --bg: #F0F8FF;
     --theme: #fff;
     --theme-inverse: #000;
+
+    /* Specific Elements */
     --line: #dbdada;
     --button: #000;
     --button-hover: #333;
     --navbar-hover: #0000FF;
     
+    /* Borders and Shadows  */
+    --form-border: #4285f4;
+    --form-shadow: rgba(66, 133, 244, 0.15);
+    --card-shadow: rgba(0, 0, 0, 0.08);
+
+    /* Mini-card */
     --run-2k: #60b5ff;
     --run-5k: #ffa955;
     --run-10k: #9f8cec;
@@ -21,11 +29,19 @@
     --bg: #0B121E;
     --theme: #1A202C;
     --theme-inverse: #fff;
+
+    /* Specific Elements */
     --line: #555;
     --button: #fff;
     --button-hover: #ccc;
     --navbar-hover: #00bbff;
 
+    /* Borders and Shadows  */
+    --form-border: #65a0fe;
+    --form-shadow: rgba(96, 148, 231, 0.15);
+    --card-shadow: rgba(255, 255, 255, 0.08);
+
+    /* Mini-card */
     --run-2k: #3074e1;
     --run-5k: #ff761b;
     --run-10k: #6c4fdf;
@@ -128,12 +144,12 @@ body {
     border-radius: 8px;
     padding: 0.5rem 1.5rem;
     margin: 1.5rem auto;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
 }
 
 .card,
 .mini-card {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px var(--card-shadow);
 }
 
 .card h2 {
@@ -226,14 +242,17 @@ select {
     padding: 0.5rem 0.6rem;
     border-radius: 4px;
     border: 1px solid var(--line);
+    background-color: var(--theme);
+    color: var(--theme-inverse);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus {
     outline: none;
-    border-color: #4285f4;
-    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.15);
+    border-color: var(--form-border);
+    box-shadow: 0 0 0 2px var(--form-shadow);
 }
 
 .message {
